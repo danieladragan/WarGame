@@ -5,6 +5,7 @@ from game_data import *
 
 class Hierophant(Superior_Soldier):
 
+	# set specialism tree available for Hierophant
 	def set_specialsm(self, specialism):
 		available_specialisms = HIEROPHANT_SPECIALISM.keys()
 
@@ -13,6 +14,7 @@ class Hierophant(Superior_Soldier):
 		else:
 			print "The specialism selected does nor exist"
 
+	# set skillset from the available skills of Hierophant
 	def set_skillset(self, skill):
 		available_skills = HIEROPHANT_SPECIALISM.get(self.specialism)
 
@@ -20,6 +22,8 @@ class Hierophant(Superior_Soldier):
 			self.skillset.append(skill)
 		else:
 			print "This skill is not available"
+
+	# add items (weapon and equipment)
 
 	def add_weapon(self, weapon):
 		if len(self.weapons) <= HIEROPHANT_WEAPONS:

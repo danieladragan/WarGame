@@ -33,8 +33,6 @@ class Superior_Soldier(Soldier):
 	def add_experience(self, experience_points):
 		self.experience = self.experience + experience_points
 
-	# choose new skills, weapons, equipment 
-
 	def add_skill(self, skill):
 		if skill not in self.skillset:
 			self.skillset.append(skill)
@@ -97,13 +95,3 @@ class Superior_Soldier(Soldier):
 	
 	def decrease_health(self, health_points):
 		self.health = self.health - health_points 	
-
-
-
-if __name__ == "__main__":
-	s = Superior_Soldier()
-	s.set_experience(10)
-	print s.experience
-
-	s.add_experience(10)
-	print s.experience

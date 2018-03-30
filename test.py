@@ -66,7 +66,7 @@ class TestSoldier(unittest.TestCase):
 		
 		self.assertEqual(soldier.get_shoot(), 10, "The set_shoot method does not initialise the right values")
 
-	# for armour
+	# for armour points
 	def test_set_armour_upper_limit(self):
 		soldier = Soldier()
 		soldier.set_armour(60)
@@ -85,7 +85,7 @@ class TestSoldier(unittest.TestCase):
 		
 		self.assertEqual(soldier.get_armour(), 10, "The set_armour method does not initialise the right values")
 
-	# for morale
+	# for morale points
 	def test_set_morale_upper_limit(self):
 		soldier = Soldier()
 		soldier.set_morale(60)
@@ -104,7 +104,7 @@ class TestSoldier(unittest.TestCase):
 		
 		self.assertEqual(soldier.get_morale(), 10, "The set_morale method does not initialise the right values")
 
-	# for health
+	# for health points
 	def test_set_health_upper_limit(self):
 		soldier = Soldier()
 		soldier.set_health(60)
@@ -123,7 +123,7 @@ class TestSoldier(unittest.TestCase):
 		
 		self.assertEqual(soldier.get_health(), 10, "The set_health method does not initialise the right values")
 
-	# for cost
+	# for cost points
 	def test_set_cost_upper_limit(self):
 		soldier = Soldier()
 		soldier.set_cost(60)

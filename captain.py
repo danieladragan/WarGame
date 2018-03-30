@@ -5,6 +5,7 @@ from game_data import *
 
 class Captain(Superior_Soldier):
 
+	# set specialism tree available for Captain
 	def set_specialsm(self, specialism):
 		available_specialisms = CAPTAIN_SPECIALISM.keys()
 
@@ -13,6 +14,7 @@ class Captain(Superior_Soldier):
 		else:
 			print "The specialism selected does nor exist"
 
+	# set skillset from the available skills of Captain
 	def set_skillset(self, skill):
 		available_skills = CAPTAIN_SPECIALISM.get(self.specialism)
 
@@ -20,6 +22,8 @@ class Captain(Superior_Soldier):
 			self.skillset.append(skill)
 		else:
 			print "This skill is not available"
+
+	# add items (weapon and equipment)
 
 	def add_weapon(self, weapon):
 		if len(self.weapons) <= CAPTAIN_WEAPONS:

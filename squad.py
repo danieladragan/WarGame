@@ -16,7 +16,6 @@ class Squad:
 		hierophant = Hierophant()
 		self.members = [captain, hierophant]
 
-	# only when creating the squad
 	def set_name(self, new_name):
 		self.name = new_name
 
@@ -25,8 +24,17 @@ class Squad:
 
 	def get_credit(self):
 		return self.credit
+
+	def get_members(self):
+		return self.members
+
+	def set_visibility(self, new_visibility):
+		self.visibility = new_visibility
+
+	def get_visibility(self):
+		return self.visibility
 	
-	# modify the credit; the credit < 0 is not possible
+	# function for adding a soldier in the team
 	def add_member(self, new_member):
 		if isinstance(new_member, Soldier):
 			if len(self.members) <= 10:
@@ -37,6 +45,7 @@ class Squad:
 		else:
 			print "Only soldiers can be added in a squad!"
 
+	# function for deleting a soldier from a team
 	def delete_member(self, member):
 		if isinstance(member, Soldier):
 			self.members.remove(member)
@@ -44,19 +53,12 @@ class Squad:
 		else:
 			print "The Captain and Hierophant can not be deleted!"
 
-	def get_members(self):
-		return self.members
-
-	def set_visibility(self, new_visibility):
-		self.visibility = new_visibility
-
-	def get_visibility(self):
-		return self.visibility
-
+	# display the users' credit
 	def display_credit(self):
 		print "For the "+ self.name + " squad the credit is "\
 				 + str(self.credit)
 
+	# adding and removing items in/from stash
 	def add_stash(self, new_item):
 		self.stash.append(new_item)
 
@@ -68,29 +70,3 @@ class Squad:
 			return "This squad has " + str(len(self.members)) + " members"
 		else:
 			return "You are not allowed to see the members of this squad!"
-
-
-if __name__ == "__main__":
-	s = Squad()
-	s.set_name("Miraculous squad")
-	s.display_credit()
-	s.add_credit(10)
-	s.display_credit()
-	print s
-
-	soldier = Soldier()
-
-	soldier.set_move(10)
-	soldier.set_cost(40)
-	soldier.set_health(30)
-	soldier.set_armour(50)
-	soldier.set_morale(40)
-	soldier.set_shoot(5)
-	soldier.set_fight(20)
-
-	squad = Squad()
-	squad.set_name("Test Squad")
-	squad.set_visibility(True)
-	squad.add_member(soldier)
-
-	print len(squad.get_members())

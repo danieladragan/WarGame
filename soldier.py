@@ -3,14 +3,12 @@
 class Soldier:
 	move = 0		# integer (0-50)
 	fight = 0		# integer (0-50)
-	shoot = 0		# integer (0-50)  positive or negative)
+	shoot = 0		# integer (0-50)
 	armour = 0 		# integer (0-50)
-	morale = 0 		# integer (0-50  positive or negative)
+	morale = 0 		# integer (0-50)
 	health = 0 		# integer (0-50)
-	cost = 0 		# integer (10-30)
+	cost = 0 		# integer (0-50)
 	note = " " 		# string (listing special characteristics and equipment)
-
-#	def __init__(self):
 		
 	def set_move(self, new_move):
 		if new_move > 50 or new_move < 0:
@@ -80,14 +78,3 @@ class Soldier:
 
 	def get_note(self):
 		return self.note
-
-
-if __name__ == "__main__":
-	soldier = Soldier()
-	soldier.set_health(10)
-	print soldier.get_health()
-	soldier.set_health(60)
-	print soldier.get_health()
-
-	soldier.set_note("This soldier is carring a shild")
-	print soldier.get_note()

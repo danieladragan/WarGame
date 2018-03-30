@@ -8,7 +8,7 @@ CAPTAIN_SPECIALISM = {
 		}
 HIEROPHANT_SPECIALISM = {"druid" : ["mystic heal", "summon companion", "poison"]}
 
-
+# boundaries for the number of weapons/items
 CAPTAIN_WEAPONS = 2
 CAPTAIN_ITEMS = 6
 
